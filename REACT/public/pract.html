@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    I am learning JS
+  </body>
+  <script>
+    "use strict";
+
+    console.log(this);
+    // let a = 34;
+    let a = "hi";
+    document.write(a);
+
+    // --- FUNCTIONS ---
+    function hello() {
+      // let conf = confirm("Are you Sure");
+      document.writeln("Hey Hammad");
+      // document.writeln(conf);
+    }
+    hello();
+
+    // --- OBJECTS ---
+    let obj = {
+      R: 34,
+      G: 33,
+      func: function (n) {
+        console.log(n);
+      },
+    };
+
+    // --- EVENT LISTENER ---
+    document.addEventListener("click", hello);
+
+    // --- ARRAYS ---
+    let arr = [1, 2, 3, "Hi", true];
+
+    // --- LOOPS ---
+    arr.forEach((e) => console.log(e));
+
+    // --- ARROW FUNCTION ---
+    let myFunc1 = () => console.log(this);
+    myFunc1();
+
+    let obj2 = {
+      a: this,
+      myFunc2: function () {
+        console.log(this);
+      },
+    };
+    obj2.myFunc2();
+
+    // --- CALLBACK FUNCTIONS ---
+    setTimeout(() => {
+      document.write("33");
+    }, 3000);
+    document.write("WELCOME");
+
+    // --- PROMISES ---
+  </script>
+</html>
