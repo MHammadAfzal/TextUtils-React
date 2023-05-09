@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
+let name = "M Hammad";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <nav>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </nav>
+      <div className="container">
+        <h1>Hello {name}</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente
+          quis nulla repudiandae corrupti cum excepturi ipsa similique? Qui,
+          obcaecati illum molestiae sit magni sunt voluptatibus ex? Nisi hic
+          esse commodi ullam nulla!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with M Hammad Mohal
-        </a>
-      </header>
-    </div>
+      </div>
+    </>
   );
 }
 
