@@ -1,0 +1,7 @@
+{
+  "editor.guides.bracketPairs": true,
+  "editor.fontSize": 20,
+  "editor.formatOnSave": true,
+  "editor.accessibilityPageSize": 10,
+  "editor.tabSize": 10
+}
