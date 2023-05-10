@@ -8,16 +8,19 @@ export default function TextForm(props) {
     let newText = text.toUpperCase();
     // setText("The UpperCase button was clicked\n" + newText);
     setText(newText);
+    props.showAlert("Converted to Uppercase", "success");
   };
 
   const handleLoClick = () => {
     //     console.log("LowerCase was clicked");
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to Lowercase", "success");
   };
 
   const handleClear = (event) => {
     setText("");
+    props.showAlert("Cleared text", "success");
   };
 
   const handleOnChange = (event) => {
@@ -30,11 +33,13 @@ export default function TextForm(props) {
     txt.select();
     txt.setSelectionRange(0, 9999);
     navigator.clipboard.writeText(txt.value);
+    props.showAlert("Copied", "success");
   };
 
   const handleExtraSpace = () => {
     let newText = text.split(/[ ] + /);
     setText(newText.join(" "));
+    props.showAlert("Extra Space has been removed", "success");
   };
 
   return (
@@ -83,7 +88,9 @@ export default function TextForm(props) {
         <p>
           {text.split(" ").length - 1} words and {text.length} characters
         </p>
-        <p>{0.008 * text.split(" ").length} Minutes reading</p>
+        <p>
+          {text.length > 0 ? 0.008 * text.split(" ").length : 0} Minutes reading
+        </p>
         <h3>Preview</h3>
         <p>{text.length > 0 ? text : "Enter something above to preview"}</p>
       </div>
